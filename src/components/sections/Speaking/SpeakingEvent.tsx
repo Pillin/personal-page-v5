@@ -1,20 +1,9 @@
-import React from 'react';
 import { Calendar, MapPin, Video } from 'lucide-react';
 import { Link } from '../../ui/Link';
-
-interface SpeakingEventProps {
-  title: string;
-  event: string;
-  date: string;
-  location: string;
-  description: string;
-  videoUrl?: string;
-  slidesUrl?: string;
-}
+import { SpeakingEventProps } from './types';
 
 export function SpeakingEvent({
   title,
-  event,
   date,
   location,
   description,

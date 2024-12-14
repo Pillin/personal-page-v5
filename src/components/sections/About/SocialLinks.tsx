@@ -1,18 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Globe } from 'lucide-react';
 import { Link } from '../../ui/Link';
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { SocialLinksProps } from './types'
 
-export function SocialLinks() {
-  const { t } = useLanguage();
-  
-  const links = [
-    { icon: Linkedin, href: `https://linkedin.com/in/${t('contact.linkedin')}`, label: 'LinkedIn' },
-    { icon: Github, href: `https://github.com/${t('contact.github')}`, label: 'GitHub' },
-    { icon: Globe, href: 'https://pillippa.dev', label: 'Website' },
-  ];
-
+export function SocialLinks({ links }: SocialLinksProps) {
   return (
     <div className="flex space-x-4">
       {links.map(({ icon: Icon, href, label }) => (

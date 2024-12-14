@@ -4,16 +4,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import { Link } from '../../ui/Link';
 import { Card } from '../../ui/Card';
 import { GradientText } from '../../ui/GradientText';
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  demoUrl?: string;
-  githubUrl?: string;
-  index: number;
-}
+import { ProjectCardProps } from './types';
 
 export function ProjectCard({
   title,

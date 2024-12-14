@@ -4,7 +4,6 @@ import { Button } from '../../ui/Button';
 export function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
   };
 
   return (

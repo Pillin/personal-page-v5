@@ -4,17 +4,7 @@ import { Calendar, MapPin, Video } from 'lucide-react';
 import { Link } from '../../ui/Link';
 import { Card } from '../../ui/Card';
 import { GradientText } from '../../ui/GradientText';
-
-interface SpeakingCardProps {
-  title: string;
-  event: string;
-  date: string;
-  location: string;
-  description: string;
-  videoUrl?: string;
-  slidesUrl?: string;
-  index: number;
-}
+import { SpeakingCardProps } from './types'
 
 export function SpeakingCard({
   title,

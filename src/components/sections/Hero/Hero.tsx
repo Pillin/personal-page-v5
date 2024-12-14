@@ -1,13 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Button } from './ui/Button';
-import { useLanguage } from '../contexts/LanguageContext';
-import { fadeIn, slideIn } from './animations/variants';
+import { Button } from '../../ui/Button';
+import { fadeIn, slideIn } from '../../animations/variants';
+import { HeroProps } from './types'
 
-export function Hero() {
-  const { t } = useLanguage();
-
+export function Hero({ title, greeting, subtitle, ctaButton: { label, onClick } }: HeroProps ) {
+  console.log({ title })
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       {/* Animated background elements */}
@@ -41,21 +39,21 @@ export function Hero() {
             variants={slideIn}
             className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent"
           >
-            {t('hero.greeting')}
+            {greeting}
           </motion.h1>
           
           <motion.p 
             variants={slideIn}
             className="text-2xl sm:text-3xl text-gray-700 dark:text-gray-300"
           >
-            {t('hero.title')}
+            {title}
           </motion.p>
 
           <motion.p 
             variants={slideIn}
             className="text-xl text-gray-600 dark:text-gray-400"
           >
-            {t('hero.subtitle')}
+            {subtitle}
           </motion.p>
 
           <motion.div
@@ -65,9 +63,9 @@ export function Hero() {
             <Button
               size="lg"
               className="group"
-              onClick={() => document.getElementById('projects')?.scrollIntoView()}
+              onClick={onClick}
             >
-              {t('hero.cta')}
+              {label}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>

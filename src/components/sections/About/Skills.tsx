@@ -1,13 +1,7 @@
 import { motion } from 'framer-motion';
-import { Code2, Globe, Server } from 'lucide-react';
+import { SkillsProps } from './types';
 
-const skills = [
-  { icon: Code2, label: 'Frontend', items: ['JavaScript', 'TypeScript', 'React'] },
-  { icon: Server, label: 'Backend', items: ['Python', 'Django', 'Node.js'] },
-  { icon: Globe, label: 'Other', items: ['Git', 'GraphQL', 'Accessibility'] },
-];
-
-export function Skills() {
+export function Skills({ skills }: SkillsProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
       {skills.map(({ icon: Icon, label, items }, index) => (
