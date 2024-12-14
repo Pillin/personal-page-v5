@@ -38,7 +38,7 @@ export function MobileMenu({ onClose, menuItems }: MobileMenuProps) {
       className="fixed inset-y-0 right-0 w-full sm:w-80 glass-effect shadow-2xl z-50"
     >
       <div className="h-full flex flex-col">
-        <div className="flex justify-between items-center p-4 border-b border-gray-200/20 dark:border-gray-800/20">
+        <div className="flex justify-end items-center p-4 border-b border-gray-200/20 dark:border-gray-800/20">
           <Button
             variant="ghost"
             size="sm"
@@ -50,14 +50,14 @@ export function MobileMenu({ onClose, menuItems }: MobileMenuProps) {
         </div>
 
         <nav className="flex-1 overflow-y-auto py-6">
-          <ul className="space-y-2 px-4">
+          <ul className="space-y-2 px-4 relative">
             {menuItems.map((item, i) => <MenuItemC {...item} i={i} onClose={onClose} />)}
           </ul>
         </nav>
 
         <motion.div
           custom={menuItems.length + 1}
-          className="p-4 border-t border-gray-200/20 dark:border-gray-800/20"
+          className="flex justify-between p-4 border-t border-gray-200/20 dark:border-gray-800/20"
         >
           <ThemeToggle />
           <LanguageToggle />

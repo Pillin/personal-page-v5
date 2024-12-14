@@ -17,7 +17,7 @@ export function About({ title, summary, experience, links, skills, funFact }: Ab
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           <MotionWrapper className="space-y-6">
-            <h2 className="text-3xl font-bold">{title}</h2>
+            <h2 className="text-3xl font-bold ">{title}</h2>
             <p className="text-gray-600 dark:text-gray-300">
               {summary}
             </p>

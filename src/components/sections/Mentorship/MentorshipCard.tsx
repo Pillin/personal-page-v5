@@ -16,7 +16,6 @@ interface MentorshipCardProps {
 }
 
 export function MentorshipCard({
-  id,
   title,
   organization,
   date,
@@ -38,7 +37,7 @@ export function MentorshipCard({
             </div>
           </div>
           
-          <GradientText className="text-xl font-semibold mb-2">
+          <GradientText className="text-xl font-semibold mb-2" animate={false}>
             {title}
           </GradientText>
           <p className="text-orange-500 dark:text-purple-400 mb-1">{organization}</p>
@@ -47,6 +46,7 @@ export function MentorshipCard({
           {link && (
             <Link 
               href={link} 
+              target='_blank'
               className="inline-flex items-center group/link"
             >
               <span className="group-hover/link:translate-x-1 transition-transform">

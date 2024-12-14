@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 import { Card } from '../../ui/Card';
@@ -26,21 +25,24 @@ export function ExperienceCard({
       transition={{ delay: index * 0.2 }}
       className="relative pl-8"
     >
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-orange-500 to-purple-600" />
-      <motion.div
-        className="absolute left-0 top-0 -translate-x-1/2 bg-white dark:bg-gray-900 p-2 rounded-full shadow-lg"
-        whileHover={{ scale: 1.2, rotate: 360 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        <Briefcase className="w-4 h-4 text-gradient" />
-      </motion.div>
+      <section className='absolute left-0 top-0 bottom-0 flex column justify-center items-center'>
+        <div className="absolute left-[16px] top-0 bottom-0 w-px bg-gradient-to-b from-orange-500 to-purple-600" />
+        <motion.div
+          className="absolute flex justify-center left-0 top-0 bg-white dark:bg-gray-900 p-2 rounded-full shadow-lg"
+          whileHover={{ scale: 1, rotate: 360 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <Briefcase className="w-4 h-4" />
+        </motion.div>
+      </section>
+      
       
       <Card 
         hover={false} 
         className="group p-6 hover:shadow-orange-500/10 dark:hover:shadow-purple-600/10"
       >
         <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-          <GradientText className="text-xl font-semibold mb-1">
+          <GradientText className="text-xl font-semibold mb-1" animate={false}>
             {title}
           </GradientText>
           <p className="text-orange-500 dark:text-purple-400 font-medium">{company}</p>

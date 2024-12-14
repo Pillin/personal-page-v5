@@ -23,13 +23,15 @@ const MenuItemC = ({ href, label, onClose, i }: MenuItem & MenuItemProps) => {
       key={href}
       custom={i}
       variants={itemVariants}
-      className="relative"
+      className="relative list-none"
     >
       <Link
         href={href}
         variant="nav"
         onClick={onClose}
-        className="block py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        data-color="purple"
+        data-text={label}
+        className="nav-item"
       >
         {label}
       </Link>

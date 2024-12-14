@@ -10,16 +10,17 @@ import { useData } from './data'
 export default function App() {
   const { menuItems, hero, about, experience, projects, speaking, mentorship } = useData()
   const onHeroClick = () => document.getElementById('projects')?.scrollIntoView()
+  const ctaButton = { label: hero.ctaButton.label, onClick: onHeroClick }
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <Navigation menuItems={menuItems}/>
       <div className="pt-16">
         <main>
-          <Hero {...{ ...hero, ctaButton: { label: hero.ctaButton.label, onClick: onHeroClick }}} />
+          <Hero {...{ ...hero }} />
           <About {...about } />
           <Experience {...experience } />
-          <Projects {...projects } />
+          {projects.projects.length > 0 && <Projects {...projects } />}
           <Speaking {...speaking } />
           <Mentorship {...mentorship }/>
         </main>

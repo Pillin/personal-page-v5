@@ -1,9 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
-import { useProjectsData } from './projectsData';
-import { useLanguage } from '../../../contexts/LanguageContext';
 import { staggerContainer } from '../../animations/variants';
+import { ProjectsProps } from './types';
 
 export function Projects({ title, subtitle, projects }: ProjectsProps) {
   return (

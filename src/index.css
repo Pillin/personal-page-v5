@@ -12,6 +12,46 @@
   }
 }
 
+@layer components {
+  .nav-item {
+    position: relative;
+    top: 0px;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-text-stroke: 1px lightblue;
+
+    &:before {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 0px;
+      height: 100%;
+      content: attr(data-text);
+      text-indent: 1rem;
+      width: 0px;
+      overflow: hidden;
+      transition: 1s width;
+    }
+
+    &:hover:before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  .nav-item[data-color="purple"]::before {
+    color: #c084fc;
+    -webkit-text-stroke: 1px #c084fc;
+    border-right: 8px solid #c084fc;
+  }
+}
+
 @layer utilities {
   .glass-effect {
     @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg;

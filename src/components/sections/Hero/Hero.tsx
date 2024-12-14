@@ -5,7 +5,6 @@ import { fadeIn, slideIn } from '../../animations/variants';
 import { HeroProps } from './types'
 
 export function Hero({ title, greeting, subtitle, ctaButton: { label, onClick } }: HeroProps ) {
-  console.log({ title })
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       {/* Animated background elements */}
@@ -37,7 +36,7 @@ export function Hero({ title, greeting, subtitle, ctaButton: { label, onClick } 
         >
           <motion.h1 
             variants={slideIn}
-            className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent"
+            className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent text-balance"
           >
             {greeting}
           </motion.h1>
@@ -56,7 +55,8 @@ export function Hero({ title, greeting, subtitle, ctaButton: { label, onClick } 
             {subtitle}
           </motion.p>
 
-          <motion.div
+          {onClick && (
+            <motion.div
             variants={fadeIn}
             className="pt-4"
           >
@@ -69,6 +69,7 @@ export function Hero({ title, greeting, subtitle, ctaButton: { label, onClick } 
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
+          )}
         </motion.div>
       </div>
     </div>

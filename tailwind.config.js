@@ -4,6 +4,12 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      inset: {
+        '16px': '16px'
+      },
+      content: {
+        attr: 'attr(data-text)'
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
