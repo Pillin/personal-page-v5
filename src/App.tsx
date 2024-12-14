@@ -7,12 +7,16 @@ import { Projects } from './components/sections/Projects/Projects';
 import { Speaking } from './components/sections/Speaking/Speaking';
 import { Mentorship } from './components/sections/Mentorship/Mentorship';
 import { Contact } from './components/sections/Contact/Contact';
+import { useData } from './data'
 
 export default function App() {
+  const { menuItems } = useData()
+
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-      <Navigation />
-      <div className="pt-16"> {/* Add padding top to account for fixed navbar */}
+      <Navigation menuItems={menuItems}/>
+      <div className="pt-16">
         <main>
           <Hero />
           <About />
