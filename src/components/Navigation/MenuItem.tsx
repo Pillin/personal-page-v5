@@ -20,7 +20,7 @@ const itemVariants = {
 const MenuItemC = ({ href, label, onClose, i }: MenuItem & MenuItemProps) => {
   return (
     <motion.li
-      key={href}
+      key={`navigation-${href}-${i}`}
       custom={i}
       variants={itemVariants}
       className="relative list-none"

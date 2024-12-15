@@ -36,7 +36,7 @@ export function Navigation({ menuItems }: NavigationProps) {
             </motion.div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {menuItems.map((item) => <MenuItemC {...item} />)}
+              {menuItems.map((item, i) => <MenuItemC {...item} key={`navigation-${item.href}-${i}`} />)}
               <LanguageToggle />
               <ThemeToggle />
             </div>

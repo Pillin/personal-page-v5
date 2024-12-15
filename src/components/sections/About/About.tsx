@@ -40,7 +40,7 @@ export function About({ title, summary, experience, links, skills, funFact }: Ab
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-900 p-4 rounded-lg shadow-lg"
+                className="absolute -bottom-6 right-0 md:-right-6 bg-white dark:bg-gray-900 p-4 rounded-lg shadow-lg"
               >
                 <p className="text-sm font-medium">{funFact.description}</p>
               </motion.div>
