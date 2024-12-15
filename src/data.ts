@@ -1,4 +1,4 @@
-import { Github, Linkedin, Globe, Code2, Server, File } from 'lucide-react';
+import { Github, Linkedin, Globe, Code2, Server, File, Twitter } from 'lucide-react';
 import { useLanguage } from './contexts/LanguageContext';
 
 export const useData = () => {
@@ -34,6 +34,7 @@ export const useData = () => {
     links: [
       { icon: Linkedin, href: `https://www.linkedin.com/in/ignaciapons/`, label: 'LinkedIn' },
       { icon: Github, href: `https://github.com/Pillin`, label: 'GitHub' },
+      { icon: Twitter, href: `https://x.com/_pilliin_`, label: 'Twitter' },
       { icon: Globe, href: 'https://pillippa.dev', label: 'Website' },
       { icon: File, href: 'https://docs.google.com/document/d/1OM09GgIH2GSJKkdXCQ5fZLAUMVmVlTk_9zFR2-8QRw0/edit?usp=sharing', label: 'Resume' }
     ],
