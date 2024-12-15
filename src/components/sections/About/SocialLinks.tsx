@@ -13,8 +13,9 @@ export function SocialLinks({ links }: SocialLinksProps) {
         >
           <Link
             href={href}
+            target='_blank'
             variant="default"
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+            className="p-2 flex hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
           >
             <Icon className="w-5 h-5" />
             <span className="sr-only">{label}</span>
