@@ -32,11 +32,12 @@ export function Hero({ title, greeting, subtitle, ctaButton: { label, onClick } 
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="space-y-6"
+          className="space-y-6 relative"
         >
           <motion.h1 
             variants={slideIn}
-            className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent text-balance"
+            data-text={greeting}
+            className="glowing-text text-5xl sm:text-7xl font-bold text-balance"
           >
             {greeting}
           </motion.h1>
